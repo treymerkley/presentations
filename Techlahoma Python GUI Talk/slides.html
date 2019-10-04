@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="file:///home/trey/git/reveal.js/css/reveal.css"/>
 
 <link rel="stylesheet" href="file:///home/trey/git/reveal.js/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="file:///home/trey/git/reveal.js/lib/css/zenburn.css"/>
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -26,30 +27,28 @@
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide">
-<h1 class="title">Fun With Frontends in Python</h1><h2 class="author">Trey Merkley</h2><p class="date">Created: 2019-09-30 Mon 15:47</p>
+<h1 class="title">Fun With Frontends in Python</h1><h2 class="author">Trey Merkley</h2><p class="date">Created: 2019-10-04 Fri 14:35</p>
 </section>
 <section id="table-of-contents-section">
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#/slide-1">1. Python</a></li>
-<li><a href="#/slide-2">2. Qt</a></li>
-<li><a href="#/slide-3">3. Benefits</a></li>
-<li><a href="#/slide-4">4. Caveats</a></li>
-<li><a href="#/slide-5">5. Example</a></li>
-<li><a href="#/slide-6">6. A simple window in Qt</a></li>
-<li><a href="#/slide-7">7. Getting Started</a></li>
-<li><a href="#/slide-8">8. End</a></li>
+<li><a href="#/slide-org2fe37c9">Python</a></li>
+<li><a href="#/slide-org4900f20">Qt</a></li>
+<li><a href="#/slide-orgd9794b1">Benefits</a></li>
+<li><a href="#/slide-org423887e">Caveats</a></li>
+<li><a href="#/slide-org12f44f3">Example</a></li>
+<li><a href="#/slide-orga3bac62">A simple window in Qt</a></li>
+<li><a href="#/slide-org4d71848">Getting Started</a></li>
+<li><a href="#/slide-orga5f4128">Python ❤ Qt</a></li>
 </ul>
 </div>
 </div>
 </section>
-</section>
-<section:t>
 <section>
-<section id="slide-1">
-<h2 id="1"><span class="section-number-2">1</span> Python</h2>
+<section id="slide-org2fe37c9">
+<h2 id="org2fe37c9">Python</h2>
 <aside class="notes">
 <p>
 Python is a language that's been used for years as a way to make complex logic feel simple. It is simple and powerful. However, its life has been dominated as being the behind-the-scenes logic supporting applications like DevOps and data science, but not on the frontend, which is a shame, because it's a great language for quickly producing robust front ends the envy of Winforms.
@@ -58,17 +57,17 @@ Python is a language that's been used for years as a way to make complex logic f
 </aside>
 
 <ul>
-<li>simple</li>
-<li>powerful</li>
-<li>usually on the backend</li>
+<li class="fragment appear">simple</li>
+<li class="fragment appear">powerful</li>
+<li class="fragment appear">usually on the backend</li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-2">
-<h2 id="2"><span class="section-number-2">2</span> Qt</h2>
+<section id="slide-org4900f20">
+<h2 id="org4900f20">Qt</h2>
 <aside class="notes">
 <p>
 How do you pull off a pure Python frontend? With the graphical framework Qt. Qt is a GUI framework written in C++ and ported to many languages, Python among them. It's easy, object oriented, and portable to every major operating system: Windows, Mac, Linux, iOS, and Android. Additionally, it was first released in 1995 and has been actively developed by multiple organizations, making it one of the most stable GUI frameworks out there.
@@ -77,24 +76,17 @@ How do you pull off a pure Python frontend? With the graphical framework Qt. Qt 
 </aside>
 
 <ul>
-<li>object-oriented</li>
-<li>portable</li>
-<li>mature</li>
+<li class="fragment appear">object-oriented</li>
+<li class="fragment appear">portable</li>
+<li class="fragment appear">mature</li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-3">
-<h2 id="3"><span class="section-number-2">3</span> Benefits</h2>
-<ul>
-<li>pure code</li>
-<li>easy</li>
-<li>well documented</li>
-
-</ul>
-
+<section id="slide-orgd9794b1">
+<h2 id="orgd9794b1">Benefits</h2>
 <aside class="notes">
 <p>
 So why would you want to do this, what are the benefits of writing a GUI in Python? There are some pretty great benefits to me, in addition to the above. When I was in school, all GUIs were made in Winforms using Visual Studio, and as a Linux user, this irked me to no end because, not only could I not develop and run anything I wrote on my own machine, because it was my first time developing software it really bothered me that I didn't understand the infrastructure of .NET and Winforms to understand how the graphical editor made GUIs and how to code I wrote communicated with it.
@@ -114,11 +106,18 @@ Finally, Qt and Python implementations of Qt are <i>very</i> popular, and as a r
 
 </aside>
 
+<ul>
+<li class="fragment appear">pure code</li>
+<li class="fragment appear">easy</li>
+<li class="fragment appear">well documented</li>
+
+</ul>
+
 </section>
 </section>
 <section>
-<section id="slide-4">
-<h2 id="4"><span class="section-number-2">4</span> Caveats</h2>
+<section id="slide-org423887e">
+<h2 id="org423887e">Caveats</h2>
 <aside class="notes">
 <p>
 So what are the caveats? Well, because Python is interpreted, it is going to be technically slower than, say C++ or C#. However, it should not be noticeable to the average user, and you should only really need to do something else if your project grows to the size that maintaining the frontend in Python doesn't make sense, like trying to glue your Python to a C# backend. However, if you notice that your application is stealing more than its fair share of CPU cycles and seems to be causing problems for users, it might be time to port.
@@ -139,17 +138,17 @@ So now let's look at some code.
 </aside>
 
 <ul>
-<li>Python is slower</li>
-<li>Packages require work to manage</li>
-<li>PyQt5 vs PySide2</li>
+<li class="fragment appear">Python is slower</li>
+<li class="fragment appear">Packages require work to manage</li>
+<li class="fragment appear">PyQt5 vs PySide2</li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-5">
-<h2 id="5"><span class="section-number-2">5</span> Example</h2>
+<section id="slide-org12f44f3">
+<h2 id="org12f44f3">Example</h2>
 <aside class="notes">
 <p>
 This is the complete code of a really simple application using PySide2. We're just going to walk through this starting at the top with the shebang. Remember: Python 2.7 is about to be retired, so the time to convert your code, if written using 2.7 syntax, is now. We have to import the system module for Qt to function correctly. You have your base application, your standard label. Now Qt works by having everything individual item in your interface as a widget, including the base window itself, so we import QWidget to act as the main frame for everything to go into. Additionally, if you were to add stuff to this frame without telling Qt how it's supposed to look, it'd come out pretty weird, so we also bring in the VBoxLayout to make sure everything looks alright.
@@ -188,8 +187,8 @@ app.exec_()
 </section>
 </section>
 <section>
-<section id="slide-6">
-<h2 id="6"><span class="section-number-2">6</span> A simple window in Qt</h2>
+<section id="slide-orga3bac62">
+<h2 id="orga3bac62">A simple window in Qt</h2>
 <aside class="notes">
 <p>
 It's important to note that Qt uses whatever theme you have installed on your machine for its appearance, so this is what it looks like on my work laptop, but on a Windows or Mac machine it would look like a standard graphical application.
@@ -206,8 +205,8 @@ It's important to note that Qt uses whatever theme you have installed on your ma
 </section>
 </section>
 <section>
-<section id="slide-7">
-<h2 id="7"><span class="section-number-2">7</span> Getting Started</h2>
+<section id="slide-org4d71848">
+<h2 id="org4d71848">Getting Started</h2>
 <aside class="notes">
 <p>
 So I'm not going to walk you through how to get started with Python altogether, that is for another presentation that I would imagine either Techlahoma or another group has already put up. Assuming you already have Python and Pip installed, just run <code>python -m pip install PySide2 --user</code> so you can ensure it's a version for you, not the global machine. From there, just start writing! Between your autocompletion and online documentation you'll be golden. The official Qt documents are a good source, but as always, DuckDuckGo is your friend in figuring everything out.
@@ -225,8 +224,8 @@ So I'm not going to walk you through how to get started with Python altogether, 
 </section>
 </section>
 <section>
-<section id="slide-8">
-<h2 id="8"><span class="section-number-2">8</span> End</h2>
+<section id="slide-orga5f4128">
+<h2 id="orga5f4128">Python ❤ Qt</h2>
 <aside class="notes">
 <p>
 In conclusion, Python is a great language to write graphical applications. If you're just getting started and want to learn how graphical applications work, or you're trying to put together a prototype, or even if you want to roll out an app you know will run everywhere, Qt in Python is a wonderful choice to get started. I was Trey Merkley, if you have any questions at all, I'm on GitHub and Gitter, and I'm in the Techlahoma Slack channel. Thanks everyone.
@@ -234,9 +233,7 @@ In conclusion, Python is a great language to write graphical applications. If yo
 
 </aside>
 
-<p>
-Python ❤ Qt
-</p>
+
 <ul>
 <li>github.com/treymerkley</li>
 <li>Slack Member ID: U7V237750</li>
@@ -273,11 +270,7 @@ transitionSpeed: 'default',
 
 // Optional libraries used to extend reveal.js
 dependencies: [
- { src: 'file:///home/trey/git/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'file:///home/trey/git/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'file:///home/trey/git/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'file:///home/trey/git/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'file:///home/trey/git/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: 'file:///home/trey/git/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }]
 
 });
 </script>

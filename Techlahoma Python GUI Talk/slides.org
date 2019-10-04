@@ -2,7 +2,9 @@
 #+AUTHOR: Trey Merkley
 #+EMAIL: Slack Member ID: U7V237750
 #+DATE:
-#+REVEAL: split:t
+#+REVEAL_HLEVEL: 1
+#+OPTIONS: num:nil
+#+REVEAL_PLUGINS: (highlight)
 #+LINK_UP:
 #+LINK_HOME:
 
@@ -28,6 +30,7 @@
 Python is a language that's been used for years as a way to make complex logic feel simple. It is simple and powerful. However, its life has been dominated as being the behind-the-scenes logic supporting applications like DevOps and data science, but not on the frontend, which is a shame, because it's a great language for quickly producing robust front ends the envy of Winforms.
 #+END_NOTES
 
+#+ATTR_REVEAL: :frag (appear)
 + simple
 + powerful
 + usually on the backend
@@ -38,14 +41,12 @@ Python is a language that's been used for years as a way to make complex logic f
 How do you pull off a pure Python frontend? With the graphical framework Qt. Qt is a GUI framework written in C++ and ported to many languages, Python among them. It's easy, object oriented, and portable to every major operating system: Windows, Mac, Linux, iOS, and Android. Additionally, it was first released in 1995 and has been actively developed by multiple organizations, making it one of the most stable GUI frameworks out there.
 #+end_notes
 
+#+ATTR_REVEAL: :frag (appear)
 + object-oriented
 + portable
 + mature
 
 * Benefits
-+ pure code
-+ easy
-+ well documented
 
 #+begin_notes
 So why would you want to do this, what are the benefits of writing a GUI in Python? There are some pretty great benefits to me, in addition to the above. When I was in school, all GUIs were made in Winforms using Visual Studio, and as a Linux user, this irked me to no end because, not only could I not develop and run anything I wrote on my own machine, because it was my first time developing software it really bothered me that I didn't understand the infrastructure of .NET and Winforms to understand how the graphical editor made GUIs and how to code I wrote communicated with it.
@@ -56,6 +57,11 @@ Python is easy, and using Qt is almost easier. It is intuitive for beginners and
 
 Finally, Qt and Python implementations of Qt are /very/ popular, and as a result, there's a lot of information out there for how to use it. Rather than having to use only Qt's documentation, there are guides all over on how to do this stuff, and there's a great community built around developing frontends with Python.
 #+end_notes
+
+#+ATTR_REVEAL: :frag (appear)
++ pure code
++ easy
++ well documented
 
 * Caveats
 
@@ -69,6 +75,7 @@ Finally, there is the hairy issue of PyQt5 vs PySide2. In the long and varied hi
 So now let's look at some code.
 #+end_notes
 
+#+ATTR_REVEAL: :frag (appear)
 + Python is slower
 + Packages require work to manage
 + PyQt5 vs PySide2
@@ -121,12 +128,12 @@ So I'm not going to walk you through how to get started with Python altogether, 
 + https://doc.qt.io/qtforpython/tutorials/
 + DuckDuckGo or Ecosia
 
-* End
+* Python ❤ Qt
 
 #+begin_notes
 In conclusion, Python is a great language to write graphical applications. If you're just getting started and want to learn how graphical applications work, or you're trying to put together a prototype, or even if you want to roll out an app you know will run everywhere, Qt in Python is a wonderful choice to get started. I was Trey Merkley, if you have any questions at all, I'm on GitHub and Gitter, and I'm in the Techlahoma Slack channel. Thanks everyone.
 #+end_notes
 
-Python ❤ Qt
+
 + github.com/treymerkley
 + Slack Member ID: U7V237750
